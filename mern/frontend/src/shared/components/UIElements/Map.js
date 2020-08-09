@@ -34,8 +34,8 @@ const  Map = props => {
             state!==null?
             state.array.forEach(element => {
               <div className="row">
-              <div className="col2">element.name</div>
-              <div className="col3">element.total</div>
+              <div className="col2">{element.name}</div>
+              <div className="col3">{element.total}</div>
               </div> 
               <hr/>
             });
