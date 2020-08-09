@@ -4,6 +4,7 @@ var fs = require('fs');
 app.use(express.json())
 app.post('/all',function(req,res){
     console.log(req.body)
+    const {value}=req.body
     fs.readFile('test.txt', function(err, data) {
     if(err) throw err;
     var nP = data.toString().replace(/[\.,-\/''0-9#!$%\^&\*;:{}�=\-_'`’~"()@\+\?><\[\]\+]/g, '')
@@ -36,7 +37,7 @@ app.post('/all',function(req,res){
   top=[]
   console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
 
-  for(var i=0;i<8;i++){
+  for(var i=0;i<value;i++){
     top.push(finalWordsArray[i])
 }
 res.json(top);
