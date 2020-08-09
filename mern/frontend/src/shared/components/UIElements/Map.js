@@ -24,7 +24,24 @@ const  Map = props => {
  })
   console.log(state);
   }, [value]);
- 
+  <div className="container">
+         <div className="row">
+              <label className="col">words</label>
+              <label className="col1">frequency</label>
+          </div> 
+          <hr/>
+          {
+            state!==null?
+            state.array.forEach(element => {
+              <div className="row">
+              <div className="col2">element.name</div>
+              <div className="col3">element.total</div>
+              </div> 
+              <hr/>
+            });
+            :null
+          }
+   </div>
   
 };
  
